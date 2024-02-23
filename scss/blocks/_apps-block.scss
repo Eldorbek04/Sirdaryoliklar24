@@ -1,0 +1,93 @@
+.apps-block {
+  padding: 20px;
+  background: #F6F6F9;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  justify-content: unset;
+}
+
+
+.apps-block__image {
+  position: relative;
+  bottom: -23px;
+  width: 230px;
+  height: 180px;
+  background-image: url("../img/phone.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.apps-block__content {
+  width: 550px;
+  margin-left: 0px;
+  h4 {
+    color:#295093;
+    font-size: 24px;
+    margin: 0;
+  }
+  p {
+    color: #333;
+    font-size: 18px;
+    margin: 0;
+  }
+}
+
+.apps-block__links {
+  margin-left: auto;
+}
+
+.links__item {
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+
+  &:first-child {
+    margin-right: 20px;
+  }
+
+  &:hover,&:focus {
+    transform: scale(1.05);
+  }
+}
+
+
+
+@media only screen and (max-width: 1230px) {
+  .apps-block {
+    flex-wrap: wrap;
+  }
+  .apps-block__content {
+    width: 450px;
+    margin-left: auto;
+    h4 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .apps-block__image {
+    display: none;
+  }
+  .apps-block {
+    flex-wrap: wrap;
+  }
+  .apps-block__content {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 25px;
+    margin-left: auto;
+    h4 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .apps-block__links {
+    margin: 0 auto;
+  }
+}

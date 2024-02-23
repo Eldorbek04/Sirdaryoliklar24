@@ -1,0 +1,64 @@
+.btn-menu {
+  display: none;
+	position: relative;
+	border: none;
+	background: transparent;
+  width: 30px;
+  height: 30px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.hamburger {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 2px;
+  background: #295091;
+  transition: 0.5s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  content: '';
+  position: absolute;
+  background: #295091;
+  width: 20px;
+  height: 2px;
+  transition: 0.5s;
+}
+
+.hamburger::after {
+  left: 0;
+  top: 8px;
+}
+.hamburger::before {
+  bottom: 8px;
+  right: 0;
+}
+
+
+.menu-btn--active .hamburger {
+  background: transparent;
+}
+.menu-btn--active .hamburger::before {
+  width: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: rotate(45deg);
+  background: #fff;
+}
+
+.menu-btn--active .hamburger::after {
+  width: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: rotate(135deg);
+  background: #fff;
+}

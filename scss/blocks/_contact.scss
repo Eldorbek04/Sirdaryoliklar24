@@ -1,0 +1,283 @@
+.contact-details__wrapper {
+  align-items: flex-start;
+}
+
+.form__wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.form__wrapper-title {
+  color: #000;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.form__top {
+  label {
+    display: block;
+    margin-bottom: 20px;
+  }
+  input {
+    display: block;
+    width: 100%;
+    background: #F1F1F1;
+    border: 2px solid rgba($color: #285193, $alpha: 0.3);
+    border-radius: 5px;
+    padding: 15px;
+    outline: none;
+    color: #888;
+
+    &:focus {
+      border: 2px solid #285193;
+    }
+  }
+}
+
+.contact-tetxarea {
+  resize: none;
+  width: 100%;
+  min-height: 200px;
+  background: #F1F1F1;
+  border: 2px solid rgba($color: #285193, $alpha: 0.3);
+  border-radius: 5px;
+  padding: 15px;
+  outline: none;
+  margin-bottom: 20px;
+  &:focus {
+    border: 2px solid #285193;
+  }
+}
+
+.form__bottom {
+  width: 70%;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+  color: #888;
+  font-size: 18px;
+  background: #F1F1F1;
+  border: 2px solid rgba($color: #285193, $alpha: 0.3);
+  border-radius: 5px;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+  width: 54%;
+  
+
+  &::after {
+    width: 24px;
+    height: 24px;
+    content: '';
+    display: block;
+    background-image: url("../img/inputfile.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: rgb(231, 229, 229);
+}
+
+.verification-code-wrapper {
+  width: 70%;
+  input {
+    background: #F1F1F1;
+    border: 2px solid rgba($color: #285193, $alpha: 0.3);
+    border-radius: 5px;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    outline: none;
+
+    &:focus {
+      border: 2px solid #285193;
+    }
+  }
+}
+
+
+.send-btn {
+  padding: 15px 60px;
+  background: #295093;
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+
+  &:hover, &:focus {
+    background: #143368;
+  }
+}
+
+.business__card {
+  margin-top: 80px;
+  width: 45%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid #BCC3CD;
+  box-shadow: -10px 10px 10px 0 rgba(41, 80, 145, 0.16);
+}
+
+.card__title {
+  text-align: right;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 28px;
+  color: #295091;
+}
+
+.card__item {
+  margin-bottom: 30px;  
+}
+
+.email__link {
+  font-size: 18px;
+  color: #888888;
+  font-weight: normal;
+}
+
+.card__item-title {
+  color: #888;
+}
+
+.card__social-items {
+
+  a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    
+
+    &:nth-child(1) {
+      background-image: url("../img/fb.png");
+    }
+    &:nth-child(2) {
+      background-image: url("../img/tw.png");
+    }
+    &:nth-child(3) {
+      background-image: url("../img/ok.png");
+    }
+  }
+}
+
+.card-join-telegram {
+  padding: 6px 10px;
+  background: #295091;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+
+  &::before {
+    width: 20px;
+    height: 20px;
+    display: block;
+    content: '';
+    background-image: url("../img/tg.png");
+    margin-right: 10px;
+  }
+}
+
+.card__apps-wrapper {
+  
+  a {
+    padding: 10px;
+    background: #D6DEEA;
+    border-radius: 5px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1230px) {
+  .contact-details__wrapper {
+    flex-direction: column;
+  }
+  .form__wrapper {
+    width: 100%;
+  }
+  .business__card {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .form__bottom {
+    width: 58%;
+  } 
+}
+
+@media only screen and (max-width: 730px) {
+  .form__bottom {
+    width: 75%;
+  } 
+}
+
+@media only screen and (max-width: 600px) {
+  .form__bottom {
+    width: 100%;
+  } 
+}
+
+@media only screen and (max-width: 450px) {
+  .form__bottom {
+    width: 100%;
+  } 
+  .inputfile + label {
+    width: 100%;
+  }
+  .verification-code {
+    margin: 10px 0;
+  }
+  .verification-code-wrapper {
+    flex-direction: column-reverse;
+    width: 100%;
+    input {
+      display: block;
+      width: 100%;
+    }
+  }
+  .send-btn { 
+    width: 100%;
+  }
+
+  .card__item {
+    flex-direction: column;
+  }
+  
+  .card__title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .email__link {
+    font-size: 15px;
+  }
+
+  .card-join-telegram {
+    font-size: 15px;
+  }
+}

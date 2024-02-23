@@ -1,0 +1,52 @@
+.layer {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  top: 0;
+  z-index: 1004;
+  background: rgba($color: #000000, $alpha: 0.4);
+  transition: 0.3s ease;
+}
+
+.modal-box {
+  text-align: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  background: #fff;
+  transform: translate(-50%,-50%);  
+  width: 60%;
+
+  h4 {
+    font-size: 24px;
+    color: #295093;
+  }
+}
+
+.modal--hide {
+  opacity: 0;
+  z-index: -1;
+  transform: scale(0);
+}
+
+.hide-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #BABFC2;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-box {
+    width: 80%;
+    .telegram-join {
+      font-size: 16px;
+  
+      img {
+        margin: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,157 @@
+.covid-block {
+  padding: 40px 30px;
+  background: #F6F6F9;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.covid-block__title {
+  width: 30%;
+  font-size: 20px;
+}
+
+.covid-title__img {
+  width: 45px;
+  height: 45px;
+  background-image: url("../img/covid.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-right: 25px;
+}
+
+.covid-title__text {
+  color: #000;
+  font-weight: 500;
+}
+
+.covid-block__stats {
+  width: 70%;
+}
+
+.stats__item {
+  padding: 0 35px;
+
+  .stats__img {
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .stats-text-box {
+    h4 {
+      font-size: 18px;
+      margin: 0;
+      margin-bottom: 5px;
+      font-weight: normal;
+    }
+    p {
+      margin: 0;
+      font-size: 25px;
+      font-weight: bold;
+      color: #000;
+    }
+  }
+
+  &:nth-child(1) {
+    border-left: 2px solid #EB5569;
+    .stats__img {
+      background-image: url("../img/infected.png");
+    }
+    .stats-text-box {
+      h4 {
+        color: #DB0000;
+      }
+    }
+  }
+  &:nth-child(2) {
+    border-left: 2px solid #F4CCD1;
+    .stats__img {
+      background-image: url("../img/recovered.png");
+    }
+    .stats-text-box {
+      h4 {
+        color: #05B135;
+      }
+    }
+  }
+  &:nth-child(3) {
+    border-left: 2px solid #F4CCD1;
+    .stats__img {
+      background-image: url("../img/died.png");
+    }
+    .stats-text-box {
+      h4 {
+        color: #000;
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 1230px) {
+  .covid-block {
+    flex-direction: column;
+  }
+  .covid-block__title {
+    width: 100%;
+    margin-bottom: 25px;
+    justify-content: space-around;
+  }
+  .covid-block__stats {
+    width: 100%;
+  }
+  .stats__item {
+    .stats-text-box {
+      h4 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .stats__item {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+  .covid-block__stats {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .stats__item {
+    width: 100%;
+    padding-right: 0;
+    justify-content: unset;
+    .stats-text-box {
+      h4 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 350px) {
+  .stats__item {
+    .stats__img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
